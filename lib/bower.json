@@ -1,0 +1,17 @@
+{
+  "name": "playdate",
+  "description": "",
+  "main": "main.js",
+  "authors": [
+    "blairvansant <blairbot@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/blairvansant/Playdate-capstone",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
