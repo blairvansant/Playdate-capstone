@@ -1,0 +1,33 @@
+{
+    "playdates":{
+        "playdate0": {
+            "child": "Henry",
+            "friend": "Ben",
+            "date": "12/05/2016",
+            "uid":""
+        },
+           "playdate1": {
+            "child": "Jess",
+            "friend": "Pat",
+            "date": "12/06/2016",
+            "uid":""
+        },
+           "playdate2": {
+            "child": "Blair",
+            "friend": "Chris",
+            "date": "12/07/2016",
+            "uid":""
+        }
+        },
+        "users":{
+            "user0":{
+            "uid":"",
+            "username":"c"
+        },
+        "user1":{
+            "uid":"",
+            "username":"d"
+        
+        }
+    }
+}
