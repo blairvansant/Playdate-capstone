@@ -8,18 +8,36 @@
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!-- bootstrap -->
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
-	<body ng-app="PlaydateApp">
+	<body ng-app="playdateApp">
+		
 		
 		<div ng-include="'./partials/navbar.html'"></div>
-			<div class="row">
-      	<h1>Playdate</h1>
-        	<div class="col-xs-offset-2 col-xs-8" ng-view></div>
-    	</div>
+    <div class="" ng-view></div>
+      <!-- 	<h1>Playdate</h1>
+      	<input id="myDate" type="date">
+      	<button id="clickme">click</button> -->
+    	
 
-		<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script> <!-- firebase -->
+
+<!-- this is a date picker example -->
+    	<!-- <script type="text/javascript">
+    		document.getElementById("clickme").addEventListener("click", function( event )  {
+    			console.log(document.getElementById("myDate").value)
+    		});
+    	</script> -->
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script> <!-- firebase -->
 		<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script> <!-- jquery -->
 		<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> <!-- bootstrap -->
 		<script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script> <!-- angular -->
 		<script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js"></script> <!-- angular-route -->
+	 	<script type="text/javascript" src="javascripts/app.js"></script>
+    <script type="text/javascript" src="javascripts/AppConstants.js"></script>
+    <script type="text/javascript" src="javascripts/AppConfig.js"></script>
+    <script type="text/javascript" src="javascripts/factories/AuthFactory.js"></script>
+    <script type="text/javascript" src="javascripts/factories/UserFactory.js"></script>
+ 		<script type="text/javascript" src="javascripts/controllers/NavbarCtrl.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/AuthCtrl.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/ListPlaydateCtrl.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/CreateChildCtrl.js"></script>
 	</body>
 </html>

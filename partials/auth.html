@@ -1,3 +1,43 @@
+<div class="container col-xs-6 col-xs-offset-3">
+	<div class="row">
+		<button class="btn btn-info col-xs-6" ng-click="setLoginContainer()">Login</button>
+		<button class="btn btn-success col-xs-6" ng-click="setRegisterContainer()">Register</button>
+	</div>
+	<div class="row">
+	<form ng-show="loginContainer">
+		<div class = "form-group">
+			<label>Email Address</label>
+			<input type="email" class="col-xs-offset-1 col-xs-10" placeholder="Email address" ng-model="login.email" required autofocus>
+		</div>
+		<div>
+			<label>Password</label>
+			<input type="password" class="col-xs-offset-1 col-xs-10" placeholder="Password" ng-model="login.password" required>
+		</div>
+		<div class="form-group">
+		<a href class="btn btn-lg btn-success col-xs-offset-1 col-xs-10" ng-click="loginUser(login)">Submit Login</a>
+		</div>
+	</form>
+	</form>
+	<form ng-show="registerContainer">
+		<div class = "form-group">
+			<label>Email Address</label>
+			<input type="email" class="col-xs-offset-1 col-xs-10" placeholder="Email address" ng-model="register.email" required autofocus>
+		</div>
+		<div>
+			<label>Password</label>
+			<input type="password" class="col-xs-offset-1 col-xs-10" placeholder="Password" ng-model="register.password" required>
+		</div>
+			<div>
+			<label>Username</label>
+			<input type="text" class="col-xs-offset-1 col-xs-10" placeholder="Username" ng-model="register.username" required>
+		</div>
+		<div class="form-group">
+		<a href class="btn btn-lg btn-success col-xs-offset-1 col-xs-10" ng-click="registerUser(register)">Submit Registration</a>
+		</div>
+	</form>
+	</div>
+</div> <!-- /container —>
+
 <div class="col-sm-6 col-sm-offset-3">
 	<div class="row">
 		<a class="waves-effect waves-light btn" ng-click="setSignInContainer()">Sign-In</a>
@@ -23,3 +63,4 @@
 		</form>
 	</div>
 </div>
+>>>>>>> c73a40b33622c9cecd256795dc5c3123f91caa14
