@@ -13,14 +13,14 @@
     "bower_components",
     "test",
     "tests"
-<<<<<<< HEAD
+
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
     "angular-route": "^1.5.9",
     "angular": "^1.5.9"
   }
-=======
-  ]
->>>>>>> c73a40b33622c9cecd256795dc5c3123f91caa14
+
+ 
+
 }

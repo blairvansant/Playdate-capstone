@@ -2,16 +2,18 @@
 <html>
 <head>
 	<title>Playdate</title>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!-- font awesome -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><!-- google-icons-->
-		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 	<body ng-app="playdateApp">
 		
 		
-		<div ng-include="'./partials/navbar.html'"></div>
+		<div ng-include="'./partials/Navbar.html'"></div>
     <div class="" ng-view></div>
       <!-- 	<h1>Playdate</h1>
       	<input id="myDate" type="date">
@@ -30,6 +32,12 @@
 		<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> <!-- bootstrap -->
 		<script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script> <!-- angular -->
 		<script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js"></script> <!-- angular-route -->
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script> -->
+  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 	 	<script type="text/javascript" src="javascripts/app.js"></script>
     <script type="text/javascript" src="javascripts/AppConstants.js"></script>
     <script type="text/javascript" src="javascripts/AppConfig.js"></script>
@@ -39,5 +47,7 @@
     <script type="text/javascript" src="javascripts/controllers/AuthCtrl.js"></script>
     <script type="text/javascript" src="javascripts/controllers/ListPlaydateCtrl.js"></script>
     <script type="text/javascript" src="javascripts/controllers/CreateChildCtrl.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/EditCtrl.js"></script>
+
 	</body>
 </html>

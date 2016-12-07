@@ -1,7 +1,8 @@
 <div class="container col-xs-6 col-xs-offset-3">
 	<div class="row">
-		<button class="btn btn-info col-xs-6" ng-click="setLoginContainer()">Login</button>
-		<button class="btn btn-success col-xs-6" ng-click="setRegisterContainer()">Register</button>
+	<h4>Sign-In or Register</h4>
+		<button class="waves-effect waves-light btn" ng-click="setLoginContainer()">Login</button>
+		<button class="waves-effect waves-light btn" ng-click="setRegisterContainer()">Register</button>
 	</div>
 	<div class="row">
 	<form ng-show="loginContainer">
@@ -14,7 +15,7 @@
 			<input type="password" class="col-xs-offset-1 col-xs-10" placeholder="Password" ng-model="login.password" required>
 		</div>
 		<div class="form-group">
-		<a href class="btn btn-lg btn-success col-xs-offset-1 col-xs-10" ng-click="loginUser(login)">Submit Login</a>
+		<a href class="waves-effect waves-light btn" ng-click="loginUser(login)">Submit Login</a>
 		</div>
 	</form>
 	</form>
@@ -36,31 +37,8 @@
 		</div>
 	</form>
 	</div>
-</div> <!-- /container —>
-
-<div class="col-sm-6 col-sm-offset-3">
-	<div class="row">
-		<a class="waves-effect waves-light btn" ng-click="setSignInContainer()">Sign-In</a>
-		<a class="waves-effect waves-light btn" ng-click="setRegisterContainer()">Register</a>
-	</div>
-	<div class="row">
-		<form class="signIn-container" ng-show="signInContainer">
-			<h4>Sign-In as an Existing User</h4>
-			<input class="form-control" placeholder="Email Address" type="email" ng-model="signIn.email" required autofocus>
-			<input class="form-control" placeholder="Password" type="password" ng-model="signIn.password" required>
-			<button class="btn waves-effect waves-light" id="subBtn" type="submit" name="action" ng-click="signInUser(signIn)">Submit
-			    <i class="material-icons right">send</i>
-			</button>
-		</form>
-		<form class="register-container" ng-show="registerContainer">
-			<h4>Register as a New User</h4>
-			<input class="form-control" placeholder="Email Address" type="email" ng-model="register.email" required autofocus>
-			<input class="form-control" placeholder="Password" type="password" ng-model="register.password" required>
-			<input class="form-control" placeholder="Username" type="username" ng-model="register.username" required>
-			<button class="btn waves-effect waves-light" type="submit" name="action" ng-click="registerNewUser(register)">Submit
-			    <i class="material-icons right">send</i>
-			</button>
-		</form>
-	</div>
 </div>
->>>>>>> c73a40b33622c9cecd256795dc5c3123f91caa14
+
+ <!-- /container —> -->
+
+
