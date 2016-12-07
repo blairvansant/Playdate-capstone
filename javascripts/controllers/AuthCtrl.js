@@ -4,7 +4,10 @@ playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $loca
   $scope.loginContainer = true;
   console.log("what is this authctrl thing")
   $scope.registerContainer = false;
-
+  $scope.login = {
+    email: "z@z.com",
+    password: "123456"
+  };
 
   if($location.path()==="/logout"){
     AuthFactory.logout();
