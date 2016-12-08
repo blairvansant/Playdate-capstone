@@ -35,14 +35,14 @@ playdate.config(function($routeProvider){
             templateUrl: 'partials/auth.html',
             controller: 'AuthCtrl'
         })
+        .when('/create', {
+            templateUrl: 'partials/create-child.html',
+            controller: 'CreateChildCtrl',
+            resolve: {isAuth}
+        })
         .when('/playdate/list', {
             templateUrl: 'partials/list.html',
             controller: 'ListPlaydateCtrl',
-            resolve: {isAuth}
-        })
-        .when('/playdate/create', {
-            templateUrl: 'partials/create-child.html',
-            controller: 'CreateChildCtrl',
             resolve: {isAuth}
         })
         .when("/playdate/edit/:id", {

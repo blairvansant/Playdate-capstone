@@ -1,6 +1,8 @@
 "use strict";
 
 playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $location, $rootScope){
+  $scope.register;
+  console.log("#1", $scope.register)
   $scope.loginContainer = true;
   console.log("what is this authctrl thing")
   $scope.registerContainer = false;
@@ -8,6 +10,7 @@ playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $loca
     email: "z@z.com",
     password: "123456"
   };
+
 
   if($location.path()==="/logout"){
     AuthFactory.logout();
@@ -23,9 +26,10 @@ playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $loca
         $rootScope.user = userCreds;
         $scope.login = {};
         $scope.register = {};
-        $location.url("/items/list");
+        $location.url("/create");
     });
   };
+
 
   $scope.setLoginContainer = function(){
     $scope.loginContainer = true;
@@ -37,20 +41,23 @@ playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $loca
     $scope.registerContainer = true;
   };
 
-  $scope.registerUser = function(registerNewUser){
-    AuthFactory.registerWithEmail(registerNewUser).then(function(didRegister){
-      registerNewUser.uid = didRegister.uid;
-      // console.log("didRegister", didRegister);
-      return UserFactory.addUser(registerNewUser);
+  $scope.registerUser = function(){
+      console.log("#2", $scope.register)
+    
+    AuthFactory.registerWithEmail($scope.register).then(function(didRegister){
+      $scope.register.uid = didRegister.uid;
+
+     console.log("didRegister", didRegister);
+      return UserFactory.addUser($scope.register);
     }).then(function(registerComplete){
       //LOGIN
-      logMeIn(registerNewUser);
+      logMeIn($scope.register);
 
     });
   };
 
-  $scope.loginUser = function(loginNewUser){
-    logMeIn(loginNewUser);
+  $scope.loginUser = function(){
+    logMeIn($scope.login);
     
   };
 

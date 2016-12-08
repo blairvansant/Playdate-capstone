@@ -22,7 +22,7 @@ playdate.factory("AuthFactory", function($q, $http, $rootScope, FIREBASE_CONFIG)
   let authenticate = (credentials) => {
     console.log("cred", credentials)
     return $q((resolve, reject) => {
-      firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
+      firebase.auth().signInWithEmailAndPassword(credentials.useremail, credentials.password)
         .then((authData) =>{
           resolve(authData);
         })
@@ -35,7 +35,7 @@ playdate.factory("AuthFactory", function($q, $http, $rootScope, FIREBASE_CONFIG)
 //Firebase: Register a new user with email and password
   let registerWithEmail = (user) => {
     return $q((resolve, reject) => {
-      firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+      firebase.auth().createUserWithEmailAndPassword(user.useremail, user.password)
         .then((authData) =>{
           resolve(authData);
         })
