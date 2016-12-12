@@ -1,18 +1,18 @@
 "use strict";
 
 playdate.controller("NavCtrl", function($scope){
-	$scope.navItems =[
+	$scope.navPlaydates =[
 		{
 				name:"logout",
 				url:"#/logout"
 		},
 		{
 				name:"Add Playdate",
-				url:"#/items/list"
+				url:"#/playdates/list"
 		},
 		{
 				name:"All Playdates",
-				url:"#/items/new"
+				url:"#/playdates/new"
 		}
 	];
 });

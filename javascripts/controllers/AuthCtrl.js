@@ -26,7 +26,7 @@ playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $loca
         $rootScope.user = userCreds;
         $scope.login = {};
         $scope.register = {};
-        $location.url("/create");
+        $location.url("/playdate/list");
     });
   };
 
