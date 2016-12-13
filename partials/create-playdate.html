@@ -1,0 +1,45 @@
+
+<h1>hello world</h1>
+<div class="row">
+  <div class="input-field col s6">
+    <input ng-model="newPlaydate.yourChild" id="yourChildsName" type="text" class="validate">
+    <label for="yourChildsName">Your Child</label>
+	</div>
+	<div class="input-field col s6">
+    <input ng-model="newPlaydate.friendChild" id="friendsChildName" type="text" class="validate">
+    <label for="friendsChildName">Your Friend</label>
+	</div>
+	<div class="input-field col s6">
+		<input ng-model="newPlaydate.date" id="pickTheDate" type="string">
+	</div>
+	  <button ng-click="addNewPlaydate()" class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h3>New Todo</h3>
+<form>
+    <div class="form-group">
+        <label>Task Description</label>
+        <input type="text" class="form-control" id="add-todo-text" placeholder="New Todo Item" ng-model="newTask.task">
+    </div>
+    <div class="form-group">
+        <label>Assigned To</label>
+        <input type="text" class="form-control" id="add-todo-text" placeholder="New Todo Item" ng-model="newTask.assignedTo">
+    </div>
+    <button type="button" class="btn btn-primary btn-lg col-xs-2 " ng-click="addNewItem()">New Todo</button>
+</form> -->

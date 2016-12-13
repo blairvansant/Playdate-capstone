@@ -7,7 +7,7 @@ playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $loca
   console.log("what is this authctrl thing")
   $scope.registerContainer = false;
   $scope.login = {
-    email: "z@z.com",
+    email: "c@c.com",
     password: "123456"
   };
 

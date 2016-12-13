@@ -17,10 +17,10 @@ playdate.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
     	
     	let logged = AuthFactory.isAuthenticated();
     	let appTo = currRoute.originalPath.indexOf('/auth') !== -1;
-        console.log("pewpew", currRoute)
-        console.log("gewgew", currRoute.originalPath)
+        // console.log("pewpew", currRoute)
+        // console.log("gewgew", currRoute.originalPath)
     	
-    	console.log("appTo", appTo);
+    	// console.log("appTo", appTo);
     	
     	if(!appTo && !logged){
     		event.preventDefault();
@@ -41,12 +41,12 @@ playdate.config(function($routeProvider){
             resolve: {isAuth}
         })
         .when('/create', {
-            templateUrl: 'partials/create-child.html',
-            controller: 'CreateChildCtrl',
+            templateUrl: 'partials/create-playdate.html',
+            controller: 'CreatePlaydateCtrl',
             resolve: {isAuth}
         })
         .when("/playdate/edit/:id", {
-            templateUrl: 'partials/create-child.html',
+            templateUrl: 'partials/create-playdate.html',
             controller: 'EditCtrl',
             resolve: {isAuth}
         })

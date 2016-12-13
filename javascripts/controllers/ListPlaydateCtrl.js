@@ -10,7 +10,6 @@ playdate.controller('ListPlaydateCtrl', function($scope, $rootScope, PlaydateFac
 			$scope.playdates = fbPlaydates;
 		});
 	};
-
 	getPlaydates();
 
 	$scope.deletePlaydate = function(playdateId){
@@ -19,8 +18,8 @@ playdate.controller('ListPlaydateCtrl', function($scope, $rootScope, PlaydateFac
 		});
 	};
 
-	$scope.inputChange = function(thingy){
-		PlaydateFactory.editPlaydate(thingy).then(function(response){
+	$scope.inputChange = function(edit){
+		PlaydateFactory.editPlaydate(edit).then(function(response){
 		})
 	};
 

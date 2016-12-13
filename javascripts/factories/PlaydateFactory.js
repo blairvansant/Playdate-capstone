@@ -23,10 +23,10 @@ playdate.factory("PlaydateFactory", function($q, $http, FIREBASE_CONFIG){
 var postNewPlaydate = function(newPlaydate){
 	return $q((resolve, reject)=>{
 		$http.post(`${FIREBASE_CONFIG.databaseURL}/playdates.json`, JSON.stringify({
-			child: newPlaydate.child,
+			child: newPlaydate.yourChild,
 			date: newPlaydate.date,
-			friend: newPlaydate.friend,
-	  	uid: newPlaydate.userId
+			friend: newPlaydate.friendChild,
+	  	uid: newPlaydate.parent
 		})
 		)
 		.success(function(postResponse){
