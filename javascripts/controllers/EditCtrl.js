@@ -11,7 +11,7 @@ playdate.controller('EditCtrl', function($scope, $routeParams, PlaydateFactory, 
 	$scope.addNewPlaydate = function(){
 		PlaydateFactory.editPlaydate($scope.newPlaydate).then(function(response){
 			$scope.newPlaydate = {};
-			$location.url('/playdate/edit/:id"');
+			$location.url('/#/playdate/edit/:id');
 		});
 	};
 });
