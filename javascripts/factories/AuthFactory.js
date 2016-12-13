@@ -20,7 +20,7 @@ playdate.factory("AuthFactory", function($q, $http, $rootScope, FIREBASE_CONFIG)
 
 //Firebase: Use input credentials to authenticate user.
   let authenticate = (credentials) => {
-    console.log("cred", credentials)
+    console.log("cred", credentials);
     return $q((resolve, reject) => {
       firebase.auth().signInWithEmailAndPassword(credentials.useremail, credentials.password)
         .then((authData) =>{

@@ -12,12 +12,17 @@ playdate.controller("CreatePlaydateCtrl", function($scope, AuthFactory, UserFact
 		$scope.newPlaydate.parent = $rootScope.user.uid;
 		console.log($scope.newPlaydate);
 		PlaydateFactory.postNewPlaydate($scope.newPlaydate).then(function(playDateData){
-			console.log("possibly sucessful", playDateData)
+			console.log("possibly sucessful", playDateData);
 			// $location.url("/auth");
 			$location.url('/playdate/list');
-		})
+		});
 	};
 });
+
+
+// angular.module('datepickerBasicUsage',
+//     ['ngMaterial', 'ngMessages']).controller('AppCtrl', function($scope) {
+//   $scope.myDate = new Date();
 
 
 

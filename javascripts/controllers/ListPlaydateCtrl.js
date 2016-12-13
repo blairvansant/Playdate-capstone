@@ -14,13 +14,14 @@ playdate.controller('ListPlaydateCtrl', function($scope, $rootScope, PlaydateFac
 
 	$scope.deletePlaydate = function(playdateId){
 		PlaydateFactory.deletePlaydate(playdateId).then(function(response){
+			console.log("playdateId", playdateId);
 			getPlaydates();
 		});
 	};
 
 	$scope.inputChange = function(edit){
 		PlaydateFactory.editPlaydate(edit).then(function(response){
-		})
+		});
 	};
 
 });

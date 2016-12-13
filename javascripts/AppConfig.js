@@ -1,11 +1,11 @@
-"use strict"
+"use strict";
 
 let isAuth = (AuthFactory) => new Promise((resolve, reject)=>{
 	if (AuthFactory.isAuthenticated()){
 		resolve();
 	} else {
 		reject();
-	};
+	}
 });
 
 
@@ -17,9 +17,9 @@ playdate.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
     	
     	let logged = AuthFactory.isAuthenticated();
     	let appTo = currRoute.originalPath.indexOf('/auth') !== -1;
+      
         // console.log("pewpew", currRoute)
-        // console.log("gewgew", currRoute.originalPath)
-    	
+        // console.log("gewgew", currRoute.originalPath)	
     	// console.log("appTo", appTo);
     	
     	if(!appTo && !logged){
@@ -45,8 +45,8 @@ playdate.config(function($routeProvider){
             controller: 'CreatePlaydateCtrl',
             resolve: {isAuth}
         })
-        .when("/playdate/edit/:id", {
-            templateUrl: 'partials/create-playdate.html',
+        .when('/playdate/edit/:id', {
+            templateUrl: 'partials/edit.html',
             controller: 'EditCtrl',
             resolve: {isAuth}
         })

@@ -10,15 +10,15 @@ playdate.factory("PlaydateFactory", function($q, $http, FIREBASE_CONFIG){
 				Object.keys(response).forEach(function(key){
 					response[key].id = key;
 					playdates.push(response[key]);
-				})
+				});
 				resolve(playdates);
 			})
 			.error(function(errorResponse){
 				reject(errorResponse);
-			})
+			});
 
-		})
-	}
+		});
+	};
 
 var postNewPlaydate = function(newPlaydate){
 	return $q((resolve, reject)=>{
@@ -34,11 +34,12 @@ var postNewPlaydate = function(newPlaydate){
 		})
 		.error(function(postError){
 			reject(postError);
-		})
-	})
-}
+		});
+	});
+};
 
 var deletePlaydate = function(playdateId){
+	console.log("playdateId", playdateId);
 	return $q((resolve, reject)=>{
 		$http.delete(`${FIREBASE_CONFIG.databaseURL}/playdates/${playdateId}.json`)
 		.success(function(deleteResponse){
@@ -46,8 +47,8 @@ var deletePlaydate = function(playdateId){
 		})
 		.error(function(deleteError){
 			reject(deleteError);
-		})
-	})
+		});
+	});
 };
 
 var getSinglePlaydate = function(playdateId){
@@ -58,8 +59,8 @@ var getSinglePlaydate = function(playdateId){
 		})
 		.error(function(deleteError){
 			reject(deleteError);
-		})
-	})
+		});
+	});
 };
 
 var editPlaydate = function(editPlaydate){
@@ -77,15 +78,15 @@ var editPlaydate = function(editPlaydate){
 		})
 		.error(function(editError){
 			reject(editError);
-		})
-	})
-}
+		});
+	});
+};
 
 	return {getPlaydateList:getPlaydateList, 
 					postNewPlaydate:postNewPlaydate, 
 					deletePlaydate:deletePlaydate, 
 					getSinglePlaydate:getSinglePlaydate, 
-					editPlaydate:editPlaydate}
-})	
+					editPlaydate:editPlaydate};
+});	
 
 

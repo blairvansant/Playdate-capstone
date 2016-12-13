@@ -2,9 +2,9 @@
 
 playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $location, $rootScope){
   $scope.register;
-  console.log("#1", $scope.register)
+  console.log("#1", $scope.register);
   $scope.loginContainer = true;
-  console.log("what is this authctrl thing")
+  console.log("what is this authctrl thing");
   $scope.registerContainer = false;
   $scope.login = {
     email: "c@c.com",
@@ -16,7 +16,7 @@ playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $loca
     AuthFactory.logout();
     $rootScope.user = {};
     $location.url("/auth");
-  };
+  }
 
   let logMeIn = function(logInStuff){
       AuthFactory.authenticate(logInStuff).then(function(didLogin){
@@ -42,7 +42,7 @@ playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $loca
   };
 
   $scope.registerUser = function(){
-      console.log("#2", $scope.register)
+      console.log("#2", $scope.register);
     
     AuthFactory.registerWithEmail($scope.register).then(function(didRegister){
       $scope.register.uid = didRegister.uid;

@@ -17,8 +17,12 @@
             <div>Date: {{playdate.date}}</div>
           </div>
           <div class="card-action">
-           <a href="#/editPAGE: GET ACCESS TO UID WITH NG-MODEL"><a class="waves-effect waves-light btn">Edit</a></a>
-           <a  ng-click="deltePlaydate(playdateId)"><a class="waves-effect waves-light btn">Delete</a></a>
+            <a href="/playdate/edit/:id"><a class="waves-effect waves-light btn">Edit</a></a>
+
+     <!--  <a href="#/editPAGE:ID GET ACCESS TO UID WITH NG-MODEL"><a class="waves-effect         waves-light btn">Edit</a></a>
+ -->
+           <button  ng-click="deletePlaydate(playdate.id)"class="waves-effect waves-light btn">Delete</button>
+          
           </div>
        </div>
      </div>
@@ -30,7 +34,7 @@
 
 
 
-<!-- <a class="waves-effect waves-light btn" href="#modal1">Modal</a> -->
+<!-- <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
 
   <!-- Modal Structure
   <div id="modal1" class="modal">
