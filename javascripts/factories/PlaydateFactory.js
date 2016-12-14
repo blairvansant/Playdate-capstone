@@ -55,6 +55,7 @@ var getSinglePlaydate = function(playdateId){
 	return $q((resolve, reject)=>{
 		$http.get(`${FIREBASE_CONFIG.databaseURL}/playdates/${playdateId}.json`)
 		.success(function(getSingleResponse){
+			console.log(getSingleResponse, "single id");
 			resolve(getSingleResponse);
 		})
 		.error(function(deleteError){
@@ -63,8 +64,8 @@ var getSinglePlaydate = function(playdateId){
 	});
 };
 
-var editPlaydate = function(editPlaydate){
-	console.log("factory edit", editPlaydate);
+var editPlaydate = function(newPlaydate){
+	console.log("factory edit", newPlaydate);
 	return $q((resolve, reject)=>{
 		$http.put(`${FIREBASE_CONFIG.databaseURL}/playdates/${editPlaydate.id}.json`, JSON.stringify({
 			child: newPlaydate.child,

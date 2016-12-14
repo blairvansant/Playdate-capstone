@@ -1,5 +1,15 @@
 <h1>Edit Your Playdate</h1>
-<button class ="btn waves-effect waves-light"><a ng-href="#/playdate/list/">Edit</a></button>
+<!-- <p>{{editedPlaydate.child}}</p>
+<p>{{editedPlaydate.friend}}</p>
+<p>{{editedPlaydate.date}}</p> -->
+<input type="text" name="" ng-model="editedPlaydate.child">
+<input type="text" name="" ng-model="editedPlaydate.friend">
+<input type="text" name="" ng-model="editedPlaydate.date">
+
+
+
+
+<button class ="btn waves-effect waves-light" ng-click="editThePlaydate()">Submit</button>
 
 <!-- <button class="btn waves-effect waves-light"><a ng-href="playdate/edit/{{selectedItem.id}}">Edit</a></button> -->
 <!-- <h2>Assigned To: {{selectedItem.assignedTo}}</h2>

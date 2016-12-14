@@ -1,17 +1,25 @@
 "use strict";
 
 playdate.controller('EditCtrl', function($scope, $routeParams, PlaydateFactory, $location){
-	$scope.newPlaydate = {};
+	
+	$scope.editedPlaydate = {};
 	let playdateId = $routeParams.id;
-
+	
+	console.log("Edit Ctrl");
+	
 	PlaydateFactory.getSinglePlaydate(playdateId).then(function(onePlaydate){
 		onePlaydate.id = playdateId;
-		$scope.newPlaydate = onePlaydate;
+		$scope.editedPlaydate = onePlaydate;
+
+	
+		console.log($scope.editedPlaydate, "editedPlaydate");
 	});
-	$scope.addNewPlaydate = function(){
-		PlaydateFactory.editPlaydate($scope.newPlaydate).then(function(response){
-			$scope.newPlaydate = {};
-			$location.url('/#/playdate/edit/:id');
-		});
-	};
+
+	
+	// $scope.editSinglePlaydate = function(){
+	// 	PlaydateFactory.editPlaydate($scope.editedPlaydate).then(function(response){
+	// 		$scope.editedPlaydate = {};
+	// 		$location.url('#/playdate/list/');
+	// 	});
+	// };
 });
