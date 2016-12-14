@@ -1,6 +1,6 @@
 "use strict";
 
-playdate.factory("PlaydateFactory", function($q, $http, FIREBASE_CONFIG){
+playdate.factory("PlaydateFactory", function($q, $http, FIREBASE_CONFIG, $rootScope){
 	
 	var getPlaydateList = function(userId){
 		return $q((resolve, reject)=>{
