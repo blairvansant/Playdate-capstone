@@ -1,6 +1,6 @@
 "use strict";
 
-playdate.factory("PlaydateFactory", function($q, $http, FIREBASE_CONFIG, $rootScope){
+playdate.factory("PlaydateFactory", function($q, $http, FIREBASE_CONFIG){
 	
 	var getPlaydateList = function(userId){
 		return $q((resolve, reject)=>{
@@ -67,11 +67,11 @@ var getSinglePlaydate = function(playdateId){
 var editPlaydate = function(newPlaydate){
 	console.log("factory edit", newPlaydate);
 	return $q((resolve, reject)=>{
-		$http.put(`${FIREBASE_CONFIG.databaseURL}/playdates/${editPlaydate.id}.json`, JSON.stringify({
+		$http.put(`${FIREBASE_CONFIG.databaseURL}/playdates/${newPlaydate.id}.json`, JSON.stringify({
 			child: newPlaydate.child,
 			date: newPlaydate.date,
 			friend: newPlaydate.friend,
-	  	uid: newPlaydate.userId
+			uid: newPlaydate.uid
 		})
 		)
 		.success(function(editResponse){

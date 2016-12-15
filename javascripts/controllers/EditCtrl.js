@@ -15,11 +15,11 @@ playdate.controller('EditCtrl', function($scope, $routeParams, PlaydateFactory, 
 		console.log($scope.editedPlaydate, "editedPlaydate");
 	});
 
-	
-	// $scope.editSinglePlaydate = function(){
-	// 	PlaydateFactory.editPlaydate($scope.editedPlaydate).then(function(response){
-	// 		$scope.editedPlaydate = {};
-	// 		$location.url('#/playdate/list/');
-	// 	});
-	// };
+
+	$scope.editSinglePlaydate = function(){
+		PlaydateFactory.editPlaydate($scope.editedPlaydate).then(function(response){
+			$scope.editedPlaydate = {};
+			$location.url('/playdate/list/');
+		});
+	};
 });

@@ -4,12 +4,12 @@
 <p>{{editedPlaydate.date}}</p> -->
 <input type="text" name="" ng-model="editedPlaydate.child">
 <input type="text" name="" ng-model="editedPlaydate.friend">
-<input type="text" name="" ng-model="editedPlaydate.date">
+<input type="date" class="datepicker" name="pickTheDate" ng-model="newPlaydate.date">
 
 
 
 
-<button class ="btn waves-effect waves-light" ng-click="editThePlaydate()">Submit</button>
+<button class ="btn waves-effect waves-light" ng-click="editSinglePlaydate()">Submit</button>
 
 <!-- <button class="btn waves-effect waves-light"><a ng-href="playdate/edit/{{selectedItem.id}}">Edit</a></button> -->
 <!-- <h2>Assigned To: {{selectedItem.assignedTo}}</h2>
