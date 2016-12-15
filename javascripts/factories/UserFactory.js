@@ -10,8 +10,8 @@ playdate.factory("UserFactory", function($q, $http, FIREBASE_CONFIG){
 				})
 			)
 			.success(function(storeUserSuccess){
-				console.log("success")
-				resolve(storeUserSuccess)
+				console.log("success");
+				resolve(storeUserSuccess);
 			})
 			.error(function(storeUserError){
 				console.log("fail");
