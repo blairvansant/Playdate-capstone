@@ -13,7 +13,6 @@ playdate.controller("CreatePlaydateCtrl", function($scope, AuthFactory, UserFact
 		console.log($scope.newPlaydate);
 		PlaydateFactory.postNewPlaydate($scope.newPlaydate).then(function(playDateData){
 			console.log("possibly sucessful", playDateData);
-			// $location.url("/auth");
 			$location.url('/playdate/list');
 		});
 	};

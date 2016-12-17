@@ -16,7 +16,6 @@ playdate.factory("PlaydateFactory", function($q, $http, FIREBASE_CONFIG){
 			.error(function(errorResponse){
 				reject(errorResponse);
 			});
-
 		});
 	};
 

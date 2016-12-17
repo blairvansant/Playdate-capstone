@@ -1,7 +1,6 @@
 "use strict";
 
 playdate.controller('AuthCtrl', function($scope, AuthFactory, UserFactory, $location, $rootScope){
-  //$scope.register;
   console.log("#1", $scope.register);
   $scope.loginContainer = true;
   console.log("what is this authctrl thing");
