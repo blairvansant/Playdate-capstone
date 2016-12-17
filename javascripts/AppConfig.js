@@ -8,8 +8,6 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject)=>{
 	}
 });
 
-
-
 playdate.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
     firebase.initializeApp(FIREBASE_CONFIG);
 
@@ -18,10 +16,6 @@ playdate.run(function($rootScope, $location, FIREBASE_CONFIG, AuthFactory){
     	let logged = AuthFactory.isAuthenticated();
     	let appTo = currRoute.originalPath.indexOf('/auth') !== -1;
       
-        // console.log("pewpew", currRoute)
-        // console.log("gewgew", currRoute.originalPath)	
-    	// console.log("appTo", appTo);
-    	
     	if(!appTo && !logged){
     		event.preventDefault();
     		$location.path('/auth');
