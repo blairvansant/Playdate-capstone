@@ -1,7 +1,7 @@
 
 "use strict";
 
-playdate.controller("NavBarCtrl", function($scope){
+playdate.controller("NavbarCtrl", function($scope){
 	$scope.navPlaydates =[
 		{
 				name:"logout",
