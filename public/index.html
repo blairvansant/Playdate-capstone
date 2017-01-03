@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Playdate</title>
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+		<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+	<body ng-app="playdateApp">
+		
+	<div class="container">	
+		<div ng-include="'./partials/navbar.html'"></div>
+    <div class="" ng-view></div>
+      <!-- 	<h1>Playdate</h1>
+      	<input id="myDate" type="date">
+      	<button id="clickme">click</button> -->
+  </div>  	
+
+
+<!-- this is a date picker example -->
+    	<!-- <script type="text/javascript">
+    		document.getElementById("clickme").addEventListener("click", function( event )  {
+    			console.log(document.getElementById("myDate").value)
+    		});
+    	</script> -->
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script> <!-- firebase -->
+		<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script> <!-- jquery -->
+		<script type="text/javascript" src="/lib/bower_components/angular/angular.min.js"></script> <!-- angular -->
+		<script type="text/javascript" src="/lib/bower_components/angular-route/angular-route.min.js"></script> <!-- angular-route -->
+		<!-- z<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script> -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+	 	<script type="text/javascript" src="javascripts/app.js"></script>
+    <script type="text/javascript" src="javascripts/AppConstants.js"></script>
+    <script type="text/javascript" src="javascripts/AppConfig.js"></script>
+    <script type="text/javascript" src="javascripts/factories/AuthFactory.js"></script>
+    <script type="text/javascript" src="javascripts/factories/UserFactory.js"></script>
+    <script type="text/javascript" src="javascripts/factories/PlaydateFactory.js"></script>
+ 		<script type="text/javascript" src="javascripts/controllers/NavbarCtrl.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/AuthCtrl.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/ListPlaydateCtrl.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/CreatePlaydateCtrl.js"></script>
+    <script type="text/javascript" src="javascripts/controllers/EditCtrl.js"></script>
+
+	</body>
+</html>

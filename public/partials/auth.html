@@ -1,0 +1,47 @@
+<div class="container">
+	<form ng-show="loginContainer">
+		<h4>Sign-In or Register</h4>
+			<button class="waves-effect waves-light btn" ng-click="setLoginContainer()">Login</button>
+			<button class="waves-effect waves-light btn" ng-click="setRegisterContainer()">Register</button>
+	  	<div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" ng-model="login.useremail" required autofocus>
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" ng-model="login.password" required>
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="form-group">
+				<a href class="waves-effect waves-light btn" ng-click="loginUser()">Submit Login</a>
+			</div>
+		</div>
+  </form>
+	<form ng-show="registerContainer">
+		<div class="row">
+			<div class="input-field col s12">
+        <input id="email" type="email" class="validate" ng-model="register.useremail">
+        <label for="email">Email</label>
+      </div>
+			<div class="input-field col s12">
+      	<input id="password" type="password" class="validate" ng-model="register.password">
+      	<label for="password">Password</label>
+    	</div>
+      <div class="input-field col s12">
+        <input id="username" type="text" class="validate" ng-model="register.username" required>
+        <label for="username">Username</label>
+      </div>
+    </div>
+		<div class="form-group">
+		<button class="btn waves-effect waves-light" ng-click="registerUser(register)">Submit Registration</button>
+		</div>
+	</form>
+	</div>
+</div>
+
+ <!-- /container —> -->
+
+
