@@ -4,25 +4,25 @@
             "child": "Henry",
             "friend": "Ben",
             "date": "12/05/2016",
-            "uid":"PnvIlI4yrshde4isDsKzvZLXOsV2"
+            "uid":"LoplA4S1o6XwkESfVsIQTKAJlK73"
         },
            "playdate1": {
             "child": "Jess",
             "friend": "Pat",
             "date": "12/06/2016",
-            "uid":""
+            "uid":"LoplA4S1o6XwkESfVsIQTKAJlK73"
         },
            "playdate2": {
             "child": "Blair",
             "friend": "Chris",
             "date": "12/07/2016",
-            "uid":""
+            "uid":"LoplA4S1o6XwkESfVsIQTKAJlK73"
         }
         },
         "users":{
             "user0":{
-            "uid":"PnvIlI4yrshde4isDsKzvZLXOsV2",
-            "username":"c"
+            "uid":"LoplA4S1o6XwkESfVsIQTKAJlK73",
+            "username":"Apple"
         },
         "user1":{
             "uid":"",
